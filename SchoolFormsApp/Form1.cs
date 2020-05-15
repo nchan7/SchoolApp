@@ -35,6 +35,22 @@ namespace SchoolFormsApp
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show(testSchool.ToString());
+
+            var teacher = new Teacher(); // for testing only - to show abstract class inheritance
+        }
+
+        private void btnTestTeacher_Click(object sender, EventArgs e)
+        {
+            var teacher = new Teacher();
+            var gp = teacher.ComputeGradeAverage();
+            MessageBox.Show("the teacher's grade average is " + gp);
+        }
+
+        private void btnTestStudent_Click(object sender, EventArgs e)
+        {
+            var student = new Student();
+            var gp = student.ComputeGradeAverage();
+            MessageBox.Show("the student's grade average is " + gp);
         }
     }
 }
